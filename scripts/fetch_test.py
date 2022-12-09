@@ -3,7 +3,7 @@ import json
 
 import pytest
 
-from fetch_holidays import (
+from fetch import (
     CustomJSONEncoder,
     DescriptionParser,
     get_paper,
@@ -11,7 +11,7 @@ from fetch_holidays import (
     get_rules,
 )
 
-from .filetools import _file_path
+from filetools import workspace_path
 
 
 def test_get_paper_urls():
@@ -40,7 +40,7 @@ def _normalize(iterable):
 
 def _description_parsing_cases():
     with open(
-        _file_path("description_parsing_cases.json"),
+        workspace_path("scripts", "description_parsing_cases.json"),
         "r",
         encoding="utf-8",
     ) as f:
