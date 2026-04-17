@@ -1,4 +1,4 @@
-"""Test module `fetch_holidays`.  """
+"""Test module `fetch_holidays`."""
 
 import json
 
